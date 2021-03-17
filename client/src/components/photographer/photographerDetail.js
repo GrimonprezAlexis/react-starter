@@ -70,6 +70,41 @@ const PhotographerDetail = ({ match }) => {
                 }
             </div>
         </main>
+        <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+            <div aria-labelledby={`Contact me ${photographer.nom}`}>
+
+                <div className="modal__header">
+                        <h1>Contactez-moi</h1>
+                        <Button aria-labelledby="Fermer formulaire contact" onClick={handleClose}>X</Button>
+                </div>
+
+                <div className="modal__header__sub">
+                    <h1>{photographer.nom}</h1>
+                </div>
+
+                <div className="modal__body">
+                    <form>
+                    <div className="modal__formGroup">
+                        <label htmlFor="surname">Prénom</label>
+                        <input twpe="text" id="surname" aria-labelledby="Prénom" className="modal__formGroup"/>
+                    </div>
+                    <div className="modal__formGroup">
+                        <label htmlFor="name">Nom</label>
+                        <input twpe="text" id="name" aria-labelledby="Nom"/>
+                    </div>
+                    <div className="modal__formGroup">
+                        <label htmlFor="email">Email</label>
+                        <input twpe="email" id="email" aria-labelledby="Email"/>
+                    </div>
+                    <div className="modal__formGroup">
+                        <label htmlFor="message">Votre message</label>
+                        <textarea id="message" name="message" rows="6" cols="50" aria-labelledby="Votre message"></textarea>
+                    </div>
+                    <button aria-labelledby="Envoyez" className="modal__submit">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </Dialog>
         </>
     );
 }
