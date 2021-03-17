@@ -3,6 +3,8 @@ import './App.scss';
 
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from './components/home/home';
+import PhotographerDetail from './components/photographer/photographerDetail';
+
 
 
 class App extends Component {
