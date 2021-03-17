@@ -1,0 +1,105 @@
+/*--------------------------------------------------------------
+# Photographers page
+--------------------------------------------------------------*/
+#header__photographer {
+    justify-content: flex-start;
+}
+
+.main__photographer {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0rem;
+    align-items: center;
+
+
+    h1 {
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 64px;
+        line-height: 83px;
+        color: #D3573C;
+    }
+
+    &__localisation {
+        font-size: 24px;
+        line-height: 31px;
+        color: #901C1C;
+    }
+
+    &__tagline {
+        font-size: 18px;
+        line-height: 23px;
+        color: #525252;
+    }
+
+    &__tag {
+        display: flex;
+        margin-top: .2rem;
+
+        li {
+            margin-right: 5px;
+            border: 0.5px solid #C4C4C4;
+            box-sizing: border-box;
+            color: #901C1C;
+            padding: 0.15rem 0.5rem;
+            border-radius: 1rem;
+            font-weight: 500;
+            line-height: 23px;
+            cursor: pointer;
+        }
+    }
+
+    &__button {
+        margin-left: -15rem;
+        align-self: normal;
+        margin-top: 1.5rem;
+
+
+        button {
+            background: #911C1C;
+            border-radius: 5px;
+            border: none;
+            padding: 1.2rem;
+            color: white;
+            align-items: center;
+            text-align: center;
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+}
+
+.listbox {
+
+    &__container {
+        display: flex;
+        flex-flow: row wrap;
+        padding: 1rem 6rem;
+        align-items: center;
+    }
+
+    &__label {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 23px;
+        color: #000000;
+    }
+
+    &__select {
+        background: #911C1C;
+        border-radius: 5px;
+        padding: 0.8rem 0.5rem;
+        margin-left: 1rem;
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 23px;
+        border: none;
+        color:#fffffffc;
+        option {
+            color: white;
+        }
+    }
+}
