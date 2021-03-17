@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import '../home/home.scss'; 
 import './photographerDetail.scss';
 
+import Galerie from './galerie';
+
+
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 
@@ -69,7 +72,9 @@ const PhotographerDetail = ({ match }) => {
                     null
                 }
             </div>
+            <Galerie photographerId={match.params.id} photographerPrice={photographer.prix}/>
         </main>
+
         <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
             <div aria-labelledby={`Contact me ${photographer.nom}`}>
 
