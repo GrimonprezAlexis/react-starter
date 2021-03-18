@@ -12,8 +12,14 @@ app.use(express.static('client/build'));
 // let the react app to handle any unknown routes 
 // serve up the index.html if express does'nt recognize the route
 const path = require('path');
+
+//https://stackoverflow.com/questions/49566059/service-worker-registration-error-unsupported-mime-type-text-html
+app.get("/service-worker.js", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "public", "service-worker.js"));
+});
+
 app.get('*', (req, res) => {
-res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
 });
 // if not in production use the port 5000
 const PORT = process.env.PORT || 5000;
